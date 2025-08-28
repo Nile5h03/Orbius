@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Orbius 💕</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <div class="fullscreen-container active" id="user-info-container">
+        <h1>A Soul 💕 Awaits</h1>
+        <p>Every star needs a sky to shine in. Be the sky to this story.</p>
+        <div class="input-group">
+            <div class="input-wrapper">
+                <input type="text" id="userNameInput" class="input-field" placeholder="What should she call you?" autocomplete="off">
+                <i class="fas fa-user-pen"></i>
+            </div>
+            <div class="input-wrapper">
+                 <textarea id="userDescInput" class="textarea-field" placeholder="A little about you? (optional)"></textarea>
+                 <i class="fas fa-heart-pulse"></i>
+            </div>
+            <div class="input-wrapper">
+                <input type="password" id="geminiApiKeyInput" class="input-field" placeholder="Enter your Gemini API Key" autocomplete="off">
+                <i class="fas fa-key"></i>
+            </div>
+        </div>
+        <div class="navigation-buttons">
+            <button id="userInfoNextBtn" class="btn btn-primary">Begin the Story <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <div class="fullscreen-container" id="bot-info-container">
+        <h1>The Other Half of the Story</h1>
+        <p>Who is she? Describe her personality, her passions, her little quirks. Every detail you provide will breathe life into her words.</p>
+        <div class="input-group">
+            <div class="input-wrapper">
+                <input type="text" id="botNameInput" class="input-field" placeholder="What is her name?" autocomplete="off">
+                <i class="fas fa-signature"></i>
+            </div>
+            <div class="input-wrapper">
+                <textarea id="botDescInput" class="textarea-field" placeholder="What is she like? (e.g., 'A hopeful poet who's always daydreaming, fiercely loyal, loves street food...')"></textarea>
+                <i class="fas fa-book-open-reader"></i>
+            </div>
+        </div>
+        <div class="navigation-buttons">
+            <button id="botInfoBackBtn" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back</button>
+            <button id="botInfoNextBtn" class="btn btn-primary">Next <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <div class="fullscreen-container" id="persona-selector-container">
+        <h2>Choose Your Relationship</h2>
+        <p id="persona-prompt-text">What is your connection? This will define the tone of your conversation.</p>
+        <div class="persona-options">
+            <div class="persona-card" data-persona="bestFriend"><i class="fas fa-user-friends"></i><h3>Best Friend</h3><p>A warm, supportive chat with hints of a deeper, unspoken romantic connection.</p></div>
+            <div class="persona-card" data-persona="ex"><i class="fas fa-heart-broken"></i><h3>Ex</h3><p>A complex, moody, and emotionally charged conversation full of history and what-ifs.</p></div>
+            <div class="persona-card" data-persona="girlfriend"><i class="fas fa-heart"></i><h3>Girlfriend</h3><p>A deeply loving and romantic chat with your soulmate, full of affection and pure love.</p></div>
+        </div>
+         <div class="navigation-buttons" style="margin-top: 30px;">
+            <button id="personaBackBtn" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back</button>
+        </div>
+    </div>
+
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header">
+            <div class="profile-pic"><i class="fas fa-heart"></i></div>
+            <div class="header-content">
+                <h1 id="chat-header-title">Chat</h1>
+                <div class="status"><span class="status-dot"></span>Online</div>
+            </div>
+            <button id="logoutButton" class="logout-button" title="Logout & Reset"><i class="fas fa-sign-out-alt"></i></button>
+        </div>
+        <div class="welcome-banner"><i class="fas fa-heart"></i> Share your thoughts <i class="fas fa-heart"></i></div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Message...">
+            <button id="sendButton"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>
