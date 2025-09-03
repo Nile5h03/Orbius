@@ -1,4 +1,4 @@
-# 🌌 Orbius  
+# 💕 Orbius  
 > **_“Because even in the vastness of the universe, there must be a place where emotions orbit freely.”_**
 
 ---
